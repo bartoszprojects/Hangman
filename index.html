@@ -11,7 +11,14 @@
 </head>
 <body>
 <div id="container" ng-app="hangmanApp">
-
+    <div class="box keyboard" ng-controller="keyboardController">
+        <p id="singleKey"></p>
+        <ul>
+            <li ng-repeat="key in keys">
+                <button ng-click="pressKey(key)">{{ key }}</button>
+            </li>
+        </ul>
+    </div>
 </div>
 
 <script src="scripts/main.js"></script>
