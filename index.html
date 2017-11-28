@@ -7,24 +7,35 @@
     <script src="bower_components/angular-material/angular-material.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="styles/styles.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
 </head>
 <body>
 <div id="container" ng-app="hangmanApp">
-    <div class="box keyboard" ng-controller="keyboardController">
-        <p id="singleKey"></p>
-        <p> {{ splittedWord }} </p>
-        <p> {{ hiddenWord }} </p>
-        <p> {{ returnedWord }} </p>
-        <p> {{ ultimateWord }} </p>
-        <p>prompt: {{ currentPrompt }} </p>
-        <p style="color:green">points: {{ subpoint }}</p>
-        <p style="color:red">errors: {{ error }}</p>
-        <ul>
-            <li ng-repeat="key in keys">
-                <button id="button{{ key }}" ng-click="pressKey(key)">{{ key }}</button>
-            </li>
-        </ul>
+    <div ng-controller="keyboardController">
+        <div class="box">
+            <img src="images/img{{ imgUrl }}.png"/>
+        </div>
+        <div class="box">
+            <button ng-click="resetHTML()">bartek</button>
+            <button ng-click="nextGame()">next game</button>
+            <p id="singleKey"></p>
+            <p>splittedWord: {{ splittedWord }} </p>
+            <p>hiddenWord: {{ hiddenWord }} </p>
+            <p>returnedWord: {{ returnedWord }} </p>
+            <p>ultimateWord: {{ ultimateWord }} </p>
+            <p>prompt: {{ currentPrompt }} </p>
+            <p style="color:green">points: {{ subpoint }}</p>
+            <p style="color:red">errors: {{ error }}</p>
+            <p>mainPoint: {{ mainPoint }}</p>
+        </div>
+        <div class="box">
+            <ul class="keyboard">
+                <li ng-repeat="key in keys">
+                    <button id="button{{ key }}" ng-click="pressKey(key)">{{ key }}</button>
+                </li>
+            </ul>
+        </div>
+
     </div>
 </div>
 
