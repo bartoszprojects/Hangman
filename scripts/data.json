@@ -1,20 +1,20 @@
 {
   "statements": {
     "word1": {
-      "prompt": "Best Python REST framework?",
-      "answer": "Django Rest Framework"
+      "prompt": "best python rest framework",
+      "answer": "django rest framework"
     },
     "word2": {
-      "prompt": "Longest polish word?",
-      "answer": "Konstantynopolitanczykowianeczka"
+      "prompt": "longest polish word",
+      "answer": "konstantynopolitanczykowianeczka"
     },
     "word3": {
-      "prompt": "Best french electronic artist?",
-      "answer": "Jean Michel Jarre"
+      "prompt": "best french electronic artist",
+      "answer": "jean michel jarre"
     },
     "word4": {
-      "prompt": "Polish capital?",
-      "answer": "Warszawa"
+      "prompt": "polish capital",
+      "answer": "warszawa"
     }
   }
 }

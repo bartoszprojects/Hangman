@@ -36,14 +36,51 @@ hangman.controller('keyboardController', ($scope, $http, getDataService) => {
 
         let randomNumber = Math.floor((Math.random() * $scope.answerList.length));
         console.log('----------------------');
-        console.log('random numbers: ',randomNumber, 1);
+        console.log('random numbers: ', randomNumber, 1);
+        console.log('!!!! ', $scope.promptList[randomNumber]);
         let splittedPromptList = $scope.promptList.splice(randomNumber, 1);
         console.log($scope.promptList)
+
+        function check(myList, searchedElement) {
+            let elements = [];
+            for (let i = 0; i < myList.length; i++) {
+                if (myList[i] === searchedElement) {
+                    elements.push(i)
+                }
+            }
+            return elements;
+        }
+
+        $scope.currentWord = $scope.promptList[randomNumber];
+        $scope.splittedWord = $scope.currentWord.split('');
+        $scope.hiddenWord = $scope.currentWord.replace(/\S/gi, '*');
+        $scope.returnedWord = $scope.hiddenWord.split('');
+        $scope.ultimateWord = $scope.returnedWord.join('');
+
+        $scope.pressKey = function (myVar) {
+            let returnedIndex = check($scope.splittedWord, myVar);
+            console.log(returnedIndex);
+
+            $scope.splittedWord.forEach((val, index) => {
+
+                if (val === myVar) {
+                    $scope.correct = true;
+                    console.log('matched !');
+
+
+                    returnedIndex.forEach((value) => {
+
+                        $scope.returnedWord[value] = myVar
+                    });
+                }
+
+                $scope.ultimateWord = $scope.returnedWord.join('');
+                console.log(val);
+                console.log(index)
+            });
+        }
+
     }
 
-
-    $scope.pressKey = function (clickedKey) {
-        document.getElementById('singleKey').innerHTML = clickedKey;
-    };
 
 });
