@@ -1,0 +1,28 @@
+{
+  "name": "Hangman",
+  "homepage": "https://github.com/bartoszprojects/Hangman",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Bartosz Lech"
+  ],
+  "license": "private",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.6.5",
+    "angular-material": "~1.0.6",
+    "angular-ui-router": "~0.3.1",
+    "angular-animate": "~1.6.4"
+  }
+}
+
+
+
+
+
