@@ -1,4 +1,4 @@
-const hangman = angular.module('hangmanApp', []);
+const hangman = angular.module('hangmanApp', ['ngMaterial', 'ngAnimate']);
 
 hangman.service('getDataService', function ($http) {
     this.jsonData = function () {
@@ -43,7 +43,7 @@ hangman.controller('keyboardController', ($scope, $http, getDataService) => {
             $scope.currentWord = $scope.answerList[$scope.randomNumber];
             $scope.currentPrompt = $scope.promptList[$scope.randomNumber];
             $scope.splittedWord = $scope.currentWord.split('');
-            $scope.hiddenWord = $scope.currentWord.replace(/\S/gi, '*');
+            $scope.hiddenWord = $scope.currentWord.replace(/\S/gi, '_');
             $scope.returnedWord = $scope.hiddenWord.split('');
             $scope.ultimateWord = $scope.returnedWord.join('');
 
@@ -70,7 +70,7 @@ hangman.controller('keyboardController', ($scope, $http, getDataService) => {
         });
 
         $scope.$watch('imgUrl', () => {
-            $scope.imgUrl >= 7 ? $scope.nextGame() : console.log('still good')
+            $scope.imgUrl >= 8 ? $scope.nextGame() : console.log('still good')
         });
 
 
@@ -96,7 +96,7 @@ hangman.controller('keyboardController', ($scope, $http, getDataService) => {
             $scope.splittedWord.forEach((val) => {
                 if (val === myVar) {
                     correct = true;
-                    tempBtn.style.border = '1px solid green';
+                    tempBtn.style.border = '2px solid green';
                     returnedIndex.forEach((value) => {
                         $scope.returnedWord[value] = myVar
                     });
@@ -105,7 +105,7 @@ hangman.controller('keyboardController', ($scope, $http, getDataService) => {
 
             });
             correct === true ? $scope.subpoint += 1 : (($scope.error += 1) && ($scope.imgUrl += 1) &&
-                (tempBtn.style.border = '1px solid red'));
+                (tempBtn.style.border = '2px solid red'));
         };
 
     }

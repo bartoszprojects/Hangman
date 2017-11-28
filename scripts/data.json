@@ -1,36 +1,36 @@
 {
   "statements": {
     "word1": {
-      "prompt": "0",
-      "answer": "zero"
+      "prompt": "best python rest framework",
+      "answer": "django rest framework"
     },
     "word2": {
-      "prompt": "1",
-      "answer": "one"
+      "prompt": "longest polish word",
+      "answer": "konstantynopolitanczykowianeczka"
     },
     "word3": {
-      "prompt": "2",
-      "answer": "two"
+      "prompt": "best french electro musican",
+      "answer": "jean michel jarre"
     },
     "word4": {
-      "prompt": "3",
-      "answer": "three three"
+      "prompt": "guess one day of week",
+      "answer": "friday"
     },
     "word5": {
-      "prompt": "4",
-      "answer": "four"
+      "prompt": "guess one month",
+      "answer": "december"
     },
     "word6": {
-      "prompt": "5",
-      "answer": "five"
+      "prompt": "president of USA?",
+      "answer": "donald trump"
     },
     "word7": {
-      "prompt": "6",
-      "answer": "six"
+      "prompt": "best javascript framework",
+      "answer": "angular js"
     },
     "word8": {
-      "prompt": "7",
-      "answer": "seven"
+      "prompt": "best polish classic composer",
+      "answer": "fryderyk szopen"
     }
   }
 }
