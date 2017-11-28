@@ -1,0 +1,16 @@
+{
+  "statements": {
+    "word1": {
+      "prompt": "Best Python REST framework?",
+      "answer": "Django Rest Framework"
+    },
+    "word2": {
+      "prompt": "Longest polish word?",
+      "answer": "Konstantynopolitanczykowianeczka"
+    },
+    "word3": {
+      "prompt": "Best french electronic artist?",
+      "answer": "Jean Michel Jarre"
+    }
+  }
+}

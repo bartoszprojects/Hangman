@@ -13,6 +13,7 @@
 <div id="container" ng-app="hangmanApp">
     <div class="box keyboard" ng-controller="keyboardController">
         <p id="singleKey"></p>
+        <p>{{ words }}</p>
         <ul>
             <li ng-repeat="key in keys">
                 <button ng-click="pressKey(key)">{{ key }}</button>
