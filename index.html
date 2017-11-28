@@ -17,7 +17,9 @@
         <p> {{ hiddenWord }} </p>
         <p> {{ returnedWord }} </p>
         <p> {{ ultimateWord }} </p>
-
+        <p>prompt: {{ currentPrompt }} </p>
+        <p style="color:green">points: {{ subpoint }}</p>
+        <p style="color:red">errors: {{ error }}</p>
         <ul>
             <li ng-repeat="key in keys">
                 <button id="button{{ key }}" ng-click="pressKey(key)">{{ key }}</button>
