@@ -11,6 +11,10 @@
     "word3": {
       "prompt": "Best french electronic artist?",
       "answer": "Jean Michel Jarre"
+    },
+    "word4": {
+      "prompt": "Polish capital?",
+      "answer": "Warszawa"
     }
   }
 }

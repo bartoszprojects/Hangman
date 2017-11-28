@@ -14,6 +14,9 @@
     <div class="box keyboard" ng-controller="keyboardController">
         <p id="singleKey"></p>
         <p>{{ words }}</p>
+        <p>{{ singleWord }}</p>
+
+
         <ul>
             <li ng-repeat="key in keys">
                 <button ng-click="pressKey(key)">{{ key }}</button>
